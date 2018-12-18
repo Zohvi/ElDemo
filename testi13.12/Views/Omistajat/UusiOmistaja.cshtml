@@ -1,0 +1,53 @@
+﻿@model testi13._12.Models.Omistajat
+
+@{
+    ViewData["Title"] = "UusiOmistaja";
+}
+
+<h2>UusiOmistaja</h2>
+
+<h4>Omistajat</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="UusiOmistaja">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Idomistaja" class="control-label"></label>
+                <input asp-for="Idomistaja" class="form-control" />
+                <span asp-validation-for="Idomistaja" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Etunimi" class="control-label"></label>
+                <input asp-for="Etunimi" class="form-control" />
+                <span asp-validation-for="Etunimi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sukunimi" class="control-label"></label>
+                <input asp-for="Sukunimi" class="form-control" />
+                <span asp-validation-for="Sukunimi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Osoite" class="control-label"></label>
+                <input asp-for="Osoite" class="form-control" />
+                <span asp-validation-for="Osoite" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Puhelinnumero" class="control-label"></label>
+                <input asp-for="Puhelinnumero" class="form-control" />
+                <span asp-validation-for="Puhelinnumero" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
