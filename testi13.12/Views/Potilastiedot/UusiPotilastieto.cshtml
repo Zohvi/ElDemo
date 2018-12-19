@@ -1,4 +1,4 @@
-﻿@model testi13._12.Models.Omistajat
+﻿@model testi13._12.Models.Potilastiedot
 
 @{
     ViewData["Title"] = "UusiOmistaja";
@@ -13,29 +13,34 @@
         <form asp-action="UusiOmistaja">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
+                <label asp-for="Idasiakas" class="control-label"></label>
+                <input asp-for="Idasiakas" class="form-control" />
+                <span asp-validation-for="Idasiakas" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Nimi" class="control-label"></label>
+                <input asp-for="Nimi" class="form-control" />
+                <span asp-validation-for="Nimi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Laji" class="control-label"></label>
+                <input asp-for="Laji" class="form-control" />
+                <span asp-validation-for="Laji" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Rotu" class="control-label"></label>
+                <input asp-for="Rotu" class="form-control" />
+                <span asp-validation-for="Rotu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="Idomistaja" class="control-label"></label>
                 <input asp-for="Idomistaja" class="form-control" />
                 <span asp-validation-for="Idomistaja" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Etunimi" class="control-label"></label>
-                <input asp-for="Etunimi" class="form-control" />
-                <span asp-validation-for="Etunimi" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Sukunimi" class="control-label"></label>
-                <input asp-for="Sukunimi" class="form-control" />
-                <span asp-validation-for="Sukunimi" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Osoite" class="control-label"></label>
-                <input asp-for="Osoite" class="form-control" />
-                <span asp-validation-for="Osoite" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Puhelinnumero" class="control-label"></label>
-                <input asp-for="Puhelinnumero" class="form-control" />
-                <span asp-validation-for="Puhelinnumero" class="text-danger"></span>
+                <label asp-for="Ideläinlääkäri" class="control-label"></label>
+                <input asp-for="Ideläinlääkäri" class="form-control" />
+                <span asp-validation-for="Ideläinlääkäri" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-default" />
