@@ -11,6 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Update="Views\Eläinlääkärit\Index.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
     <Content Update="Views\Omistajat\Index.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>

@@ -1,11 +1,12 @@
-﻿
-
-@model IEnumerable< testi13._12.Models.Omistajat>
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model IEnumerable<testi13._12.Models.Eläinlääkärit>
 @{
-        ViewData["Title"] = "Index";
-    }
+    ViewData["Title"] = "Index";
+}
 
-<h2>Omistajatietokanta</h2>
+<h2>Eläinlääkärit-tietokanta</h2>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -14,7 +15,7 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Idomistaja)
+                @Html.DisplayNameFor(model => model.Ideläinlääkäri)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Etunimi)
@@ -28,16 +29,16 @@
             <th>
                 @Html.DisplayNameFor(model => model.Puhelinnumero)
             </th>
-            
+
             <th></th>
         </tr>
     </thead>
     <tbody>
         @foreach (var item in Model)
-{
+        {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Idomistaja)
+                    @Html.DisplayFor(modelItem => item.Ideläinlääkäri)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Etunimi)
@@ -51,11 +52,11 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.Puhelinnumero)
                 </td>
-             
+
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.Idomistaja">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.Idomistaja">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Idomistaja">Delete</a>
+                    <a asp-action="Edit" asp-route-id="@item.Ideläinlääkäri">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Ideläinlääkäri">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Ideläinlääkäri">Delete</a>
                 </td>
             </tr>
         }
